@@ -1,0 +1,24 @@
+
+<template name="persion_info">
+    <view>
+    <text>姓名:{{name}} </text>
+    <text>年龄:{{age}}</text>
+    </view>
+</template>
+
+<!-- 传入一个对象，对象必须有模板所需的字段 -->
+<template is="persion_info" data="{{...persion}}" />
+
+<template name="odd">
+    <view>odd:{{num}}</view>
+</template>
+<template name="even">
+    <view>even:{{num}}</view>
+</template>
+
+<wxs src="../num.wxs" module="num_module" />
+<block wx:for="{{[1, 2, 3, 4, 5]}}"  wx:key="unique">
+    <view>{{changeNum(item)}}</view>
+    {{num_module.setNum(item)}}
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}" data='{{num: item}}' />
+</block>
