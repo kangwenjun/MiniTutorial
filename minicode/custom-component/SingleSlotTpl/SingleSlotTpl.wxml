@@ -1,0 +1,6 @@
+<!--externalClass/externalClass.wxml-->
+<text>SingleSlotTpl/SingleSlotTpl.wxml</text>
+<view class='wraper'>
+    <view>这里是SingleSlotTpl节点的内容</view>
+    <slot></slot>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "multipleSlotsTpl": "/multipleSlotsTpl/multipleSlotsTpl",
+    "SingleSlotTpl": "/SingleSlotTpl/SingleSlotTpl"
+  }
+}

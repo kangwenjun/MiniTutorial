@@ -1,0 +1,7 @@
+/* components/component-tag-name.wxss */
+
+/* 只对组件wxml内的节点生效 */
+/* 组件可以指定它所在节点的默认样式 */
+:host {
+    color: green
+}

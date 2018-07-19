@@ -1,0 +1,25 @@
+<!-- 引用组件的页面模版 -->
+<view>
+带解决的问题
+1. 组件模板的外部样式
+2. 组件模板的数据传递
+</view>
+
+<view>
+  <multipleSlotsTpl>
+    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+     <view slot='first_slot'>这里是插入到组件slot中的内容</view> 
+
+     <!-- 在同一个节点上使用普通样式类和外部样式类时，两个类的优先级是未定义的 -->
+     <view slot='first_slot'>第一个slot的内容</view>
+     <view slot='second_slot'>第二个slot的内容</view>
+  </multipleSlotsTpl>
+
+  <multipleSlotsTpl>
+  <view slot='first_slot'>第一个slot的内容</view>
+  </multipleSlotsTpl>
+
+  <SingleSlotTpl>
+  <view singleSlotTpl-class='red-text'>红颜色文本</view>
+  </SingleSlotTpl>
+</view>
