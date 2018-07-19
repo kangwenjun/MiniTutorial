@@ -1,0 +1,17 @@
+
+<!-- 
+    data-作为前缀
+    其后每个单词小写并用横杆'-'隔开
+    target.dataset自动会将传入数据的字段改为驼峰式
+-->
+<view id="tapTest" data-student-name="WeChat" bindtap="tapName"> Click me! </view>
+
+<view id="outer" bindtap="outerHanlder">
+  outer view: Click me!
+  <view id="middle" catchtap="middleHanlder"><!-- 阻断事件冒泡 -->
+    middle view: Click me!
+    <view id="inner" bindtap="innerHanlder">
+      inner view: Click me!
+    </view>
+  </view>
+</view>
