@@ -1,0 +1,18 @@
+
+<!--
+https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html
+当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件
+，框架会确保他们被重新排序，而不是重新创建，
+以确保使组件保持自身的状态，并且提高列表渲染时的效率。
+ -->
+<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<!-- 
+花括号和引号之间如果有空格，将最终被解析成为字符串
+使用 wx:for-item 可以指定数组当前元素的变量名，
+使用 wx:for-index 可以指定数组当前下标的变量名：
+-->
+<switch wx:for="{{numberArray}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>
