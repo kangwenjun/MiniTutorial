@@ -1,0 +1,83 @@
+/* /common.wxss */
+
+/* 
+class 选择器: 以一个点"."号显示
+*/
+
+/* 
+normal-text为选择器 
+CSS声明总是以分号(;)结束，声明组以大括号({})括起来
+*/
+.normal-text {
+    color: rgb(0, 200, 0);
+    background-color:#d0e4fe; /* 背景颜色 */
+    /*
+    color: rgb(255,0,0);
+    color: rgb(100%,0%,0%);
+    color:black; 
+    */
+}
+
+.fixed-text {
+    position: fixed;
+    top: 180px;
+    border: 10px solid #32cd3f;
+    background-color: gray;
+}
+
+/*
+相对定位元素的定位是相对其正常位置
+*/
+.relative-text {
+    position: relative;
+    top: 30px;
+    border: 10px solid firebrick; 
+    background-color: gray;
+}
+
+.float-right-text {
+    float: right;
+    border: 10px solid #32cd3f;
+    background-color: gray;
+}
+/*
+绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>
+Absolutely定位使元素的位置与文档流无关，因此不占据空间。
+*/
+.absolute-text {
+    position: absolute;
+    top: 30px;
+    border: 5px solid firebrick;
+    background-color: gray;
+}
+
+/* ID选择器：以 "#" 来定义*/
+#right-text {
+    text-align: right; /* 字体对齐 */
+    background-color: blue;
+    color: white;
+
+    /* 
+    以下属性只能选择其中之一
+    text-decoration: overline; 
+    text-decoration: underline;
+    text-decoration: line-through;
+    */
+    text-decoration: line-through;
+    text-transform: uppercase;
+    font-family: serif;
+
+    /* 轮廓 */
+    outline-style: solid;
+    outline-width: 10px;
+    outline-color: green;
+    
+    /* 盒子样式 */
+    margin: 30px 10px 10px 20px; /* Margin（外边距） - 清除边框区域。Margin没有背景颜色，它是完全透明 */
+    border: 50px solid gray; /* Border（边框） - 边框周围的填充和内容。边框是受到盒子的背景颜色影响 */
+    padding: 10px 5px 30px 40px; /* Padding（内边距） - 清除内容周围的区域。会受到框中填充的背景颜色影响 */
+    /* Content（内容） - 盒子的内容，显示文本和图像 */
+
+
+   
+}

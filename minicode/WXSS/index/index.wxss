@@ -1,0 +1,7 @@
+@import "../common.wxss"; /* 样式导入 */
+
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+

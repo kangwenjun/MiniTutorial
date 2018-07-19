@@ -1,0 +1,16 @@
+<!-- 
+每个组件只能有一个class，后面的覆盖前面的
+-->
+<video hidden='true'>video</video>
+<!-- display设置为inline的话，则多个div可以像span一样显示在一行了。 -->
+<view style='display:inline'>【inline text1】</view>
+<view style='display:inline'>【inline text2】</view>
+
+<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<view class="normal-text">background color</view>
+<view id="right-text">right text
+    <view class='absolute-text'>absolute text</view>
+</view>
+<view class="float-right-text">float text</view>
+<view class="fixed-text">fixed text</view>
+<view class="relative-text">relactive text</view>
