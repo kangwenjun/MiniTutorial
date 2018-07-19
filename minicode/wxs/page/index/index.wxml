@@ -1,0 +1,16 @@
+<!-- page/index/index.wxml -->
+<!-- 模块的使用 -->
+
+<!-- src 引用 .wxs 文件的相对路径 -->
+<!-- module 对导入的模块（单列）进行命名（仅当前页有效，即当前的wxml文件有效） -->
+<wxs src="./../tools.wxs" module="my_wxs_object" /> 
+<!-- 仅用于闭合标签或空标签 -->
+<!-- 第一次引用就会创建 这个模块的【单列】 -->
+
+<view>作者: {{my_wxs_object.author}} </view>
+<view>邮件: {{my_wxs_object.email}} </view>
+<view>网址: {{my_wxs_object.website}} </view>
+<view>1和2 MIN:{{my_wxs_object.min(1, 2)}}</view>
+<view>1和2 MAX:{{my_wxs_object.max(1, 2)}}</view>
+<view>名言：{{my_wxs_object.bar()}} </view>
+<view>{{my_wxs_object.calc.min(1, 2)}}</view> <!-- 只能使用所引用的模块导出的 变量和函数 -->

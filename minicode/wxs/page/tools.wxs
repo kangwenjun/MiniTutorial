@@ -1,0 +1,19 @@
+// /page/tools.wxs
+
+var calc = require("./calc.wxs");
+var bar = function () {
+    return calc.bar(calc.FOO);
+}
+var min = function (a, b) {
+    return calc.min(a, b);
+}
+var max = function (a, b) {
+    return calc.max(a, b);
+}
+
+module.exports.min = min;
+module.exports.max = max;
+module.exports.bar = bar;
+module.exports.website = "3Y.HK"; // 自定义key
+module.exports.author = "Justin";
+module.exports.email = "603164555@qq.com";

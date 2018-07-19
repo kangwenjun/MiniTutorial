@@ -1,0 +1,35 @@
+// /page/calc.wxs
+
+var min = function (a, b) {
+    console.log(a, b);
+    if (a < b)
+        return a;
+    else {
+        return b;
+    }
+}
+
+var max = function(a, b) {
+    console.log(a, b);
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+// 模块为单列模式
+var foo = "前进一步，再前进一步！";
+var bar = function (d) {
+    console.log(d);
+    return d;
+}
+// 使用module.exports 对外暴露其内部的私有变量与函数
+// module为wxs内置的对象
+// exports: 通过该属性，可以对外共享本模块的私有变量与函数。
+module.exports = {  // 第一种导出形式：合并导出
+    FOO: foo,
+    bar: bar
+  //  min: min,
+  //  max: max
+};
+module.exports.min = min; // 第二种导出形式：分开导出
+module.exports.max = max;
