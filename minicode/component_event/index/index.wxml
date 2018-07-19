@@ -1,0 +1,7 @@
+<!-- 引用组件的页面模版 -->
+<view>
+<!-- 绑定事件的名称=bind + 触发事件的名称 -->
+  <another-component bindmyevent="pageEventListener1">
+    <my-component bindmyevent="pageEventListener2"></my-component>
+  </another-component>
+</view>

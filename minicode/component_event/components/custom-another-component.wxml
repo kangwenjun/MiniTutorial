@@ -1,0 +1,4 @@
+<!--components/custom-another-component.wxml-->
+<view bindmyevent="anotherEventListener">
+  <slot />
+</view>
