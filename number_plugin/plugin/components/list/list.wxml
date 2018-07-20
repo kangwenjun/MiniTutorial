@@ -1,0 +1,3 @@
+<view wx:for="{{prototype}}" wx:key="name">
+  <view>{{item}}</view>
+</view>

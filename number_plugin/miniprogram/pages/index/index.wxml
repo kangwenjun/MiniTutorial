@@ -1,0 +1,5 @@
+
+<!-- 第三方插件的页面插入 -->
+<view>1和2:{{plugin.min(1,2)}}</view> <!-- 只能使用本地的js函数声明的函数 -->
+<list />
+<numberPlugin:prototype /> <!-- 第三方插件的名称在json中配置 -->

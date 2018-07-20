@@ -1,0 +1,4 @@
+<!--plugin/components/prototype/prototype.wxml-->
+<view wx:for="{{prototype}}" wx:key="*this">
+  <view>{{item}}</view>
+</view>

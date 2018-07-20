@@ -1,0 +1,9 @@
+{
+  "readme": [
+    "第三方插件的组件的命名规则建议为：插件名:插件名"
+  ],
+  "usingComponents": {
+    "list": "plugin://numberPlugin/list",
+    "numberPlugin:prototype": "plugin://numberPlugin/prototype"
+  }
+}
