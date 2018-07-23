@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+<!-- 
+movable-view的移动方向，属性值有all、vertical、horizontal、none
+movable-view 必须设置width和height属性，不设置默认为10px
+-->
+  <view class="section">
+    <view class="section__title">movable-view区域小于movable-area</view>
+    <movable-area style="height: 100px;width: 200px;background: red;">
+  <!-- 当movable-view小于movable-area时，movable-view的移动范围是在movable-area内； -->
+      <movable-view style="height: 50px; width: 50px; background: blue;" x="{{small_x}}" y="{{small_y}}" direction="all">
+      </movable-view>
+    </movable-area>
+
+    <view class="btn-area">
+      <button size="mini" bindtap="tap">click me to move to (30px, 30px)</button>
+    </view>
+
+    <view class="section__title">movable-view区域大于movable-area</view>
+    <movable-area style="height: 100px;width: 100px;background: red;">
+    <!-- 当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x轴方向和y轴方向分开考虑） -->
+      <movable-view style="height: 200px; width: 200px; background: blue;" x="{{x}}" y="{{y}}" direction="all">
+      </movable-view>
+    </movable-area>
+  </view>
+
+</view>
