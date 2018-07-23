@@ -1,0 +1,46 @@
+/**index.wxss**/
+.userinfo { /* 选择所有拥有class="userinfo"的组件 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.userinfo-nickname::before {
+  content: "昵称：【";
+}
+
+.userinfo-nickname::after {
+  content: "】-3YHK";
+}
+
+.usermotto {
+  margin-top: 100px;
+}
+
+view { /* 选择所有view组件 */
+  color: red;
+  background-color: green;
+}
+
+view::before { /* 在view组件、类等前边插入内容 */
+  content: "<view>"; /* 必须有content 否则没有占空间没有效果 */
+}
+
+view::after { /* 在view组件、类等后边插入内容 */
+  content: "</view>"; /* 必须有content 否则没有占空间没有效果 */
+}
+
+#italic-text { /* 选择拥有id="italic-text"的组件 */
+  font-style: italic;
+}
