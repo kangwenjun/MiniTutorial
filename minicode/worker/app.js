@@ -19,7 +19,7 @@ worker.onMessage(function (msg) {
 console.log(`[AppService] on worker create: ${worker.onMessage}`)
 
 App({
-  onLaunch: function () {
+  onLaunch: function (e) {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -51,6 +51,8 @@ App({
         }
       }
     })
+
+    console.log(e.scene, e.path, e.query);
   },
   globalData: {
     userInfo: null
