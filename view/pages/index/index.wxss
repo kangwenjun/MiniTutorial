@@ -1,0 +1,88 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 5px;
+}
+
+.view-hover {
+  color: red;
+}
+
+.section {
+  border: 3px solid black;
+}
+
+.section_gap {
+  float: left;
+}
+
+.btn-area {
+  border: 3px solid green;
+}
+
+.section__title {
+  color: pink;
+}
+
+.scroll-view-item {
+  border: 5px solid;
+  border-width: 20px;
+}
+
+.scroll-view-item_H {
+  border: 5px solid;
+  border-width: 50px;
+  display: inline;
+}
+
+.scroll-view_H {
+  border: 5px solid;
+}
+
+#green {
+  color: green;
+}
+
+#red {
+  color: red;
+}
+
+#yellow {
+  color: yellow;
+}
+
+#blue {
+  color: blue;
+}
+
+.bc_green {
+  background-color: green;
+}
+
+.bc_red {
+  background-color: red;
+}
+
+.bc_yellow {
+  background-color: yellow;
+}
+
+.bc_blue {
+  background-color: blue;
+}
