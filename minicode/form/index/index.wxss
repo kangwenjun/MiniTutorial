@@ -1,0 +1,21 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.section {
+  margin: 30px;
+}
+
+.section__title {
+  color: green;
+}
+
+label {
+  display: block;
+}
+
+input {
+  background-color: rgb(140, 243, 81);
+  color: white;
+}

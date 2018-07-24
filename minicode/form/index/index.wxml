@@ -1,0 +1,44 @@
+
+<!-- id 在e.currentTarget中 formData在target.dataSet中 -->
+<!-- from 没有name -->
+<!-- bindsubmit 携带form中的数据触发submit事件，event.detail = { value : {"name":"value"} , formId:"" } -->
+<!-- bindreset表单重置时会触发reset事件 -->
+<!-- report-submit="true" 是否返回formId用于发送模板消息 https://www.w3cschool.cn/weixinapp/weixinapp-notice.html -->
+<form id="form1" report-submit="true" data-form-data='form_data' bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section section_gap">
+        <view class="section__title">switch</view>
+        <switch name="switch1"/>
+    </view>
+
+    <!-- 名称作为key存储于detail.value中 -->
+    <view class="section section_gap">
+        <view class="section__title">slider</view>
+        <slider name="slider1" show-value ></slider>
+    </view>
+
+    <view class="section">
+        <view class="section__title">input</view>
+        <input name="input1" placeholder="please input here" />
+    </view>
+
+    <view class="section section_gap">
+        <view class="section__title">radio</view>
+        <radio-group name="radio-group1">
+            <label><radio value="radio1"/>radio1</label>
+            <label><radio value="radio2"/>radio2</label>
+        </radio-group>
+    </view>
+
+    <view class="section section_gap">
+        <view class="section__title">checkbox</view>
+        <checkbox-group name="checkbox1">
+            <label><checkbox value="checkbox1"/>checkbox1</label>
+            <label><checkbox value="checkbox2"/>checkbox2</label>
+        </checkbox-group>
+    </view>
+
+    <view class="btn-area">
+        <button formType="submit">Submit</button>
+        <button formType="reset">Reset</button>
+    </view>
+</form>
