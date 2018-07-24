@@ -1,0 +1,39 @@
+<view class="section section_gap">
+<view class="section__title">表单组件在label内：
+  <text class='tip-text'>隐式联系\n（点击label内部才能触发相关事件)</text>
+</view>
+<checkbox-group class="group" bindchange="checkboxChange">
+    <view class="label-1" wx:for="{{checkboxItems}}" wx:key="{{item.name}}">
+
+        <!-- 将表单控件作为标记标签的内容，这样的就是隐式形式 -->
+        <!-- 当点击时，就会触发对应的控件 -->
+        [<label><!-- 当点击label 就会触发checkbox事件 -->
+        <!-- hidden:隐藏多选框 -->
+            <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <view class="label-1__icon">
+            <!-- opacity:不透明。从0.0（完全透明）到1.0（完全不透明） -->
+                <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+            </view>
+            <text class="label-1__text">{{item.value}}</text>
+        </label>]
+    </view>
+</checkbox-group>
+</view>
+
+<view class="section section_gap">
+<view class="section__title">label用for标识表单组件:<text class='tip-text'>显式联系\n（点击label内部才能触发相关事件)</text></view>
+<radio-group class="group" bindchange="radioChange">
+    <view class="label-2" wx:for-items="{{radioItems}}" wx:key="{{item.name}}">
+    <!-- hidden:隐藏单选框 -->
+        <radio id="{{item.name}}" hidden value="{{item.name}}" checked="{{item.checked}}"></radio>
+        <view class="label-2__icon">
+        <!-- opacity:不透明。从0.0（完全透明）到1.0（完全不透明） -->
+            <view class="label-2__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+        </view>
+
+        <!--  <label> 标签下的 for 属性命名一个目标表单(radio) id，这样就是显式形式 -->
+        <!-- 当点击时，就会触发对应的控件 radio 的事件 -->
+        [<label class="label-2__text" for="{{item.name}}"><text>{{item.name}}</text></label>]
+    </view>
+</radio-group>
+</view>
