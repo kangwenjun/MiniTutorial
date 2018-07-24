@@ -1,0 +1,83 @@
+<!--index.wxml-->
+
+<view class="section">
+  <!-- auto-focus(即将废弃，请直接使用 focus )自动聚焦，拉起键盘 -->
+    <input placeholder="这是一个可以自动聚焦的input" focus/>
+</view>
+
+<view class="section">
+    <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+    <view class="btn-area">
+        <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+    </view>
+</view>
+
+<view class="section">
+    <input  maxlength="10" placeholder="最大输入长度10" />
+</view>
+
+<!-- 
+bindinput	EventHandle	 	当键盘输入时，触发input事件，event.detail = {value: value}，处理函数可以直接 return 一个字符串，将替换输入框的内容。
+输入框聚焦时触发，event.detail = {value: value}	输入框聚焦时触发，event.detail = {value: value}
+bindblur	EventHandle	 	输入框失去焦点时触发，event.detail = {value: value}
+bindconfirm	EventHandle	 	点击完成按钮时触发，event.detail = {value: value}
+-->
+<!-- bindinput 当键盘输入时，触发input事件，event.detail = {value: value}，处理函数可以直接 return 一个字符串，将替换输入框的内容。 -->
+<view class="section">
+    <view class="section__title">你输入的是：{{inputValue}}</view>
+    <input  bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+</view>
+
+<view class="section">
+    <input  bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" />
+</view>
+
+<!--
+type 有效值：
+text	文本输入键盘
+number	数字输入键盘
+idcard	身份证输入键盘
+digit	带小数点的数字键盘
+-->
+<view class="section">
+    <input password type="number" placeholder="number password" />
+</view>
+
+<view class="section">
+    <input password type="text" placeholder='text password' />
+</view>
+
+<view class="section">
+    <input type="digit" placeholder="带小数点的数字键盘"/>
+</view>
+
+<view class="section">
+    <input type="idcard" placeholder="身份证输入键盘" placeholder-class='placeholder' />
+</view>
+
+<view class="section">
+    <input placeholder-style="color:red" placeholder="占位符字体是红色的" />
+</view>
+
+<view class="section">
+    <input disabled='true' placeholder="禁用的" />
+</view>
+
+<!-- 
+设置键盘右下角按钮的文字	
+confirm-type 有效值：
+send	右下角按钮为“发送”
+search	右下角按钮为“搜索”
+next	右下角按钮为“下一个”
+go	右下角按钮为“前往”
+done	右下角按钮为“完成”
+
+confirm-hold	Boolean	false	点击键盘右下角按钮时是否保持【键盘不收起】,默认收取键盘
+
+cursor-spacing	Number	0	指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离
+-->
+<view class="section">
+    <input maxlength='-1' confirm-type='done' cursor-spacing='0px' 
+      confirm-hold='false' bindconfirm='bindConfirm' placeholder="send|search|next|go|done" />
+    <view>confirm:{{confirmValue}}</view>
+</view>
