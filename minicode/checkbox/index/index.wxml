@@ -1,0 +1,11 @@
+
+<checkbox-group bindchange="checkboxChange" class='country'>
+    <label class="checkbox" wx:for-items="{{country_items}}">
+    <!-- value 选中时触发的change事件 e.detail.value -->
+    <!-- checked 当前是否选中，可用来设置默认选中 -->
+    <!-- color 选中时，打勾（✔）的颜色 -->
+    <!-- disabled  	是否禁用 -->
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" 
+          color='{{item.color}}' disabled='{{item.disabled}}' />{{item.value}}
+    </label>
+</checkbox-group>

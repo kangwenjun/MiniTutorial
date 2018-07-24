@@ -1,0 +1,18 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.country {
+  border: 1px solid blue;
+}
+
+/*
+块级转为行内：display:inline 
+行内转为块级：display:block
+默认：display:none(不占位置) 
+*/
+.checkbox {
+  display: block;
+  margin: 10px;
+}
