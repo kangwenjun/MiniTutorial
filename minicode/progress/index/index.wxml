@@ -1,0 +1,21 @@
+<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+
+<!-- show-info 或者 show-info='true' 在进度条右侧显示百分比 默认为false -->
+<progress percent="20" show-info />
+
+<!-- 	stroke-width进度条线的宽度，单位px stroke:笔画,冲程 -->
+<progress percent="40" stroke-width="12" />
+
+<!-- color 已选择的进度条的颜色(默认为绿色) 使用 activeColor -->
+<progress percent="40" color="pink" />
+<progress percent="60" activeColor='blue' />
+<progress percent="60" backgroundColor='blue' />
+
+<!-- active 进度条从左往右的动画 -->
+<progress percent="80" active />
+
+<!-- backwards: 动画从头播；forwards：动画从上次结束点接着播 -->
+<progress percent="{{num}}" color='pink' show-info='true' active='true' active-mode="{{IsBackwards ? 'backwards' : 'forwards'}}" />
+
+<button bindtap="restProgress">随机进度(当前为{{IsBackwards ? "【从头播】" : "【接着播】"}})</button>
+<button bindtap="changeWards">切换为{{IsBackwards ? "接着播" : "【从头播】"}}</button>
