@@ -1,0 +1,15 @@
+<view class="btn-area">
+  <view class="body-view">
+    <text decode="true"><text>'&amp;' == </text>&amp;\n</text>
+    <text decode="true"><text>'&apos;' == </text>&apos;\n</text>
+    <text decode="true"><text>'&lt;&gt;' == </text>&lt; &gt;\n</text>
+    <text decode="true">{{spaceText}}--没有空格\n</text>
+    <text decode="true">&nbsp;{{spaceText}}-nbsp：根据字体设置的空格大小\n</text>
+    <text decode="true">&ensp;{{spaceText}}-ensp:中文字符空格一半大小\n</text>
+    <text decode="true">&emsp;{{spaceText}}-emsp：中文字符空格大小\n</text>
+
+    <text decode="true">{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>
