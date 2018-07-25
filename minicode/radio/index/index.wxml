@@ -1,0 +1,9 @@
+
+<!-- <radio-group/>中的选中项发生变化时触发change事件，event.detail = {value: 选中项radio的value} -->
+<radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}" wx:key='*this'>
+
+    <!-- <radio/>标识。当该<radio/>选中时，<radio-group/> 的change 事件会携带<radio/>的value -->
+        <radio value="{{item.name}}" checked="{{item.checked}}" color='rgb(255, 0, 0)' />{{item.value}}
+    </label>
+</radio-group>
