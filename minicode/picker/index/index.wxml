@@ -1,0 +1,88 @@
+<view class="section">
+    <view class="section__title">普通选择器</view>
+    <!-- value 的值表示表示选择了 range 中的第几个（下标从 0 开始） -->
+    <!-- range mode为 selector 或 multiSelector 时，range 有效 -->
+    <!-- mode默认为selector -->
+    <!-- bindchange:按确定时触发  -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+            当前选择: {{array[index]}}
+        </view>
+    </picker>
+</view>
+
+<view class='section'>
+  <view class='section__title'>Object普通选择器</view>
+  <!-- 当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容??? -->
+  <picker disabled='true' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key="id">
+        <view class="picker">
+            当前选择: {{objectArray[index].id}} {{objectArray[index].name}}
+        </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section__title">多列选择器</view>
+    <!-- bindcolumnchange:某一列的值改变时触发 -->
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" 
+        value="{{multiIndex}}" range='{{multiArray}}'>
+     <view class="picker">
+       {{multiArray[0][multiIndex[0]]}},{{multiArray[1][multiIndex[1]]}},{{multiArray[2][multiIndex[2]]}}
+     </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section__title">Object多列选择器</view>
+    <!-- 当 range 是一个 二维Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容  disabled='true'-->
+    <picker mode="multiSelector" bindchange='bindMultiPickerChange' 
+        bindcolumnchange="bindObjectMultiPickerColumnChange"
+        value="{{multiIndex}}" range='{{objectMultiArray}}' range-key='name'>
+     <view class="picker">
+           {{objectMultiArray[0][multiIndex[0]].id}} {{objectMultiArray[0][multiIndex[0]].name}}
+          ,{{objectMultiArray[1][multiIndex[1]].id}} {{objectMultiArray[1][multiIndex[1]].name}}
+          ,{{objectMultiArray[2][multiIndex[2]].id}} {{objectMultiArray[2][multiIndex[2]].name}}
+     </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section__title">时间选择器09:01-21:01</view>
+    <!-- start表示有效时间范围的开始，字符串格式为"hh:mm" -->
+    <!-- end表示有效时间范围的结束，字符串格式为"hh:mm"-->
+    <!-- mode="time" -->
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+            当前选择: {{time}}
+        </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section__title">日期选择器2015-09-01 ~ 2017-09-01</view>
+    <!-- start表示有效日期范围的开始，字符串格式为"YYYY-MM-DD"" -->
+    <!-- end表示有效日期范围的结束，字符串格式为"YYYY-MM-DD"-->
+    <!-- 
+      fields 有效值 year,month,day，表示选择器的粒度 默认为day
+        year:只能选年份
+        month: 可以选择年份和月份
+        day: 可以选择年份、月份和某一天
+    -->
+    <picker mode="date" fields='{{dateFields}}' value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+            当前选择: {{date}}
+        </view>
+    </picker>
+    <button bindtap='bindYear' style='display: inline'>某年</button>
+    <button bindtap='bindMonth' style='display: inline'>某月</button>
+    <button bindtap='bindDay' style='display: inline'>某天</button>
+</view>
+
+<view class="section">
+    <view class="section__title">省市区选择器</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+      <view class="picker">
+        当前选择: {{region[0]}},{{region[1]}},{{region[2]}}
+      </view>
+    </picker>
+</view>
