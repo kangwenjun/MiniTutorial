@@ -1,0 +1,20 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+/*
+设置边距会导致数值越界
+view, picker-view {
+  margin: 5px;
+}
+*/
+
+.result {
+  border: 1px solid blue;
+}
+
+.indicator-class {
+  border-top: 1px dotted blue;
+  border-bottom: 1px dotted blue;
+}

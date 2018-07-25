@@ -1,0 +1,37 @@
+<view>
+  <view class='result'>{{year}}年{{month}}月{{day}}日</view>
+
+  <!-- 
+      value数组中的数字依次表示 picker-view 内的 picker-view-colume 选择的第几项（下标从 0 开始）
+      ，数字大于 picker-view-column 可选项长度时，选择最后一项。 
+
+      表示选择框的一组数字，并控制各列显示
+  -->
+  <!--
+  bindchange当滚动选择，value 改变时触发 change 事件
+    ，event.detail = {value: value}；value为数组，
+      表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）
+
+      用于捕获选择框的一组小标，并传给所绑定的函数
+  -->
+
+  <!-- indicator选择器是指 “边框” -->
+  <picker-view indicator-style="height: 50px;" indicator-class='indicator-class'
+      style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+   
+   <!-- 其中只可放置<picker-view-column/>组件，其他节点不会显示 -->
+    <picker-view-column>
+      <view wx:for="{{years}}" wx:key="*this" style="line-height: 50px">{{item}}年</view>
+    </picker-view-column>
+
+    <picker-view-column>
+      <view wx:for="{{months}}" wx:key="*this" style="line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+
+    <picker-view-column>
+      <view wx:for="{{days}}" wx:key="*this" style="line-height: 50px">{{item}}日</view>
+    </picker-view-column>
+
+
+  </picker-view>
+</view>
