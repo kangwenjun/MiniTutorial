@@ -1,0 +1,7 @@
+
+<view>
+
+  <button bindtap='bindOpenSocket'>Open</button>
+  <button bindtap='bindSendSocketMessage'>Send</button>
+  <button bindtap='bindCloseSocket'>Close</button>
+</view>
