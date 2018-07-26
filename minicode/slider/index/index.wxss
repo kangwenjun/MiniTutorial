@@ -1,0 +1,25 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.section {
+  margin: 5px;
+  border: 1px solid blue;
+}
+
+.section__title {
+  color: green;
+}
+
+.body-view {
+  margin: 3px;
+  background-color: yellow;
+}
+
+.step {
+  padding: 5px;
+  display: inline;
+
+  background-color: green;
+}

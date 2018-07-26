@@ -1,0 +1,33 @@
+<view class="section section_gap">
+    <text class="section__title">设置left/right icon</text>
+    <view class="body-view">
+    <!-- value当前取值 -->
+        <slider bindchange="slider1change" value='20' left-icon="cancel" right-icon="success_no_circle"/>
+    </view>
+</view>
+
+<view class="section section_gap">
+    <text class="section__title">设置step</text>
+    <view class="body-view">
+    <!-- step步长，取值必须大于 0，并且可被(max - min)整除 -->
+        <label for='changeStep' bindtap='bindSubStep' class='step'>-</label>
+        <view style='margin: 5px;display: inline;'>
+        <slider id='changeStep' style='width: 150px;display: inline-block;' bindchange="slider2change" step="5"/>
+        </view>
+        <label for='changeStep' bindtap='bindAddStep' class='step'>+</label>
+    </view>
+</view>
+
+<view class="section section_gap">
+    <text class="section__title">显示当前value</text>
+    <view class="body-view">
+        <slider bindchange="slider3change" show-value/>
+    </view>
+</view>
+
+<view class="section section_gap">
+    <text class="section__title">设置最小/最大值</text>
+    <view class="body-view">
+        <slider bindchange="slider4change" min="50" max="200" show-value/>
+    </view>
+</view>
