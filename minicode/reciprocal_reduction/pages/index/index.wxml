@@ -1,0 +1,4 @@
+<view class='container' style='height: {{screenHeight}}px;'>
+  <text>height:{{screenHeight}}, width:{{screenWidth}}</text>
+  <view class='view-block'></view>
+</view>
