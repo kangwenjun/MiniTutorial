@@ -1,0 +1,17 @@
+
+.page {
+  margin: 1px;
+  border: 1px solid black;
+}
+
+.section__title {
+  color: green;
+}
+
+.page__desc {
+  color: rgb(168, 168, 168);
+}
+
+image {
+  border: 1px solid blue;
+}
