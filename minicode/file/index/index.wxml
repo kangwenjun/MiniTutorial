@@ -1,0 +1,8 @@
+
+<view>
+<button bindtap='bindGetFileInfo'>选择并查看图片信息</button>
+<button bindtap='bindChooseImage'>选择图片并保存入栈</button>
+<button bindtap='bindOpenDocument'>远程下载文件并保存入栈</button>
+<button bindtap='bindGetSaveFileList'>获取本地保存的文件列表</button>
+<button bindtap='bindRemoveSaveFile'>移除栈顶文件</button>
+</view>
