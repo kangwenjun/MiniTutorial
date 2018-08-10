@@ -1,0 +1,21 @@
+
+<view>
+<view>
+key:<input bindblur='bindKeyUpdate'></input>
+value:<input bindblur='bindValueUpdate'></input>
+</view>
+  <view class='button-list'>
+    <button bindtap='bindSetStorage'>异步写缓存</button>
+    <button bindtap='bindGetStorage'>异步读缓存</button>
+    <button bindtap='bindGetStorageInfo'>异步获取缓存信息</button>
+    <button bindtap='bindClearStorage'>异步移除缓存</button>
+  </view>
+  
+
+  <view class='button-list'>
+    <button bindtap='bindSetStorageSync'>同步写缓存</button>
+    <button bindtap='bindGetStorageSync'>同步读缓存</button>
+    <button bindtap='bindGetStorageInfoSync'>同步获取缓存信息</button>
+    <button bindtap='bindClearStorageSync'>同步移除缓存</button>
+  </view>
+</view>

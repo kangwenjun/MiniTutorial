@@ -1,0 +1,16 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+input {
+  border: 1px solid blue;
+}
+
+button {
+  margin: 5px;
+}
+.button-list {
+  border: 1px solid blue;
+  margin: 15px;
+}
