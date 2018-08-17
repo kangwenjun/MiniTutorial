@@ -3,5 +3,14 @@
 
   <button bindtap='bindOpenSocket'>Open</button>
   <button bindtap='bindSendSocketMessage'>Send</button>
+  <button bindtap='bindSendMsgData'>发送消息数据</button>
   <button bindtap='bindCloseSocket'>Close</button>
+  <button bindtap='bindQRCode'>QRCode</button>
+  <button bindtap='bindShowImage'>ShowImage</button>
+  <button bindtap='bindTest'>bindTest</button>
+
+
+  <view>
+    <input bindinput='bindInpubVehicleSn' placeholder='请输入车牌'></input>
+  </view>
 </view>

@@ -2,3 +2,7 @@
   margin: 30px;
   text-align: center;
 }
+
+input {
+  border: 1px solid blue
+}
